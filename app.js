@@ -3,6 +3,22 @@ const logger = require('morgan')
 const cors = require('cors')
 const mongoose = require('mongoose')
 require('dotenv').config()
+//
+const nodemailer = require('nodemailer')
+// //require('dotenv').config()
+// const { META_PASSWORD } = process.env
+// const nodemailerConfig = {
+//   host: 'smtp.meta.ua',
+//   port: 465,
+//   secure: true,
+//   auth: {
+//     user: 'loseva1991@meta.ua',
+//     pass: META_PASSWORD
+//   }
+// }
+ 
+// const transporter = nodemailer.createTransport(nodemailerConfig)
+
 
 const { DB_HOST } = process.env
 console.log(DB_HOST);

@@ -1,5 +1,5 @@
 const { User } = require('../../model')
-const { Unauthorized, NotFound } = require('http-errors')
+const { Unauthorized, NotFound, BadRequest } = require('http-errors')
 const bcript = require('bcryptjs')
 const jvt = require('jsonwebtoken')
 
@@ -15,6 +15,10 @@ const loginController = async(req, res, next)=> {
         const compareResult = bcript.compareSync(password, user.password)
         if (!compareResult) {
             throw new Unauthorized('Email or password is wrong')
+        }
+        if (!user.verify) {
+        throw new BadRequest('Email or password is wrong')
+ 
         }
         const payload = {
             id: user._id
