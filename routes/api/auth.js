@@ -12,7 +12,8 @@ router.post('/login', validation(joySchema), authControllers.loginController)
 router.get('/logout', authenticate, authControllers.logoutController)
 router.get('/current', authenticate, authControllers.currentController)
 router.patch('/avatars', authenticate, upload.single('avatar'), authControllers.updateAvatarController)
-router.get('/verify/:verificationToken', authControllers.verufyController )
+router.get('/verify/:verificationToken', authControllers.verufyController)
+router.post('/verify/', authControllers.repeatVerifyController)
 
 
 module.exports = router

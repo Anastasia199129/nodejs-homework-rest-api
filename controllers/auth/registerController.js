@@ -27,7 +27,6 @@ const registerController = async (req, res, next) => {
 
          const mail = {
               to: email,
-              from: 'loseva1991@meta.ua',
               subject: "Confirmation of registration",
               text: `<a href="http://localhost:3000/api/auth/varify/${verificationToken}">click to confirm email</a>`,
         }

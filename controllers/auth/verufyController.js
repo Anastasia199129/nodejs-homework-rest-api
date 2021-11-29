@@ -11,7 +11,7 @@ const verufyController = async (req, res, next) => {
     }
     await User.findByIdAndUpdate(id, { verificationToken: null, verify: true })
     res.status(200).json({
-         status: 'Ok',
+        status: 'Ok',
         code: 200,
         data: {
         message: 'Verification successful',
