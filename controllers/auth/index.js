@@ -3,7 +3,8 @@ const loginController = require('./loginController')
 const logoutController = require('./logoutController')
 const currentController = require('./currentController')
 const updateAvatarController = require('./updateAvatarController')
-
+const verufyController = require('./verufyController')
+const repeatVerifyController = require('./repeatVerifyController')
 
 
 module.exports = {
@@ -11,6 +12,8 @@ module.exports = {
     loginController,
     logoutController,
     currentController,
-    updateAvatarController
+    updateAvatarController,
+    verufyController,
+    repeatVerifyController
 
 }

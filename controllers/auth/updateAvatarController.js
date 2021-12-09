@@ -37,6 +37,7 @@ const updateAvatarController = async (req, res) => {
   }
 }
 
+//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
 
 
 module.exports = updateAvatarController
